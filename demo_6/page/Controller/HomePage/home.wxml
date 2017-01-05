@@ -33,7 +33,7 @@
              </view>
              <!--时间和聊天按钮-->
              <view class = "detail_last_view">
-                <view>1小时前 </view>
+                <view>1小时前xxx </view>
                 <image animation = "{{ talkViewShowIdIndex == idx ? animation : ''}}" bindtap = "chatWithShop" id = "{{idx}}" src = "/image/chat@2x.png" style = "height:32rpx;width:32rpx;margin-left:{{widnowWidth - 30 - 100}}px;" > </image>
              </view>
          </view>
