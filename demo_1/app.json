@@ -1,14 +1,12 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/ui/test",
-        "pages/test01/test01",
-        "pages/video/video-av"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "",
-        "navigationBarTextStyle": "black"
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#42BD56",
+    "navigationBarTitleText": "豆瓣图书",
+    "navigationBarTextStyle": "white"
+  }
 }

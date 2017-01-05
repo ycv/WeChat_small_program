@@ -1,30 +1,51 @@
-/**index.wxss**/
-.userinfo {
+page {
+  background: #F2F1EE;
+}
+
+.logo {
+  text-align:center;
+  padding-top:50rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #AAA
+}
+.logo image {
+  width: 250rpx;
+  height: 250rpx;
+}
+
+.search-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background-color: #42BD56;
+  color: #FFF;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  z-index: 100;
+}
+.search-container input {
+  background: #FFF;
+  color: #AAA;
+  padding: 5px 10rpx;
+  height: 40rpx;
+  width: 100%;
+  border-radius: 8rpx;
+}
+.search-container icon {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 40rpx;
 }
 
-.userinfo-avatar {
-  width: 228rpx;
-  height: 228rpx;
-  margin: 20rpx;
-  border-radius: 25px;
+/*header*/
+.header {
+  padding: 20rpx 30rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 100px;
-}
-.QQ-text{
-  color:darkcyan
-}
-.QQ-layout{
-  margin-top: 20px
-}
-.user-motto{
-  color:black
+.header text {
+  color: #A6A6A6;
+  font-size: 35rpx
 }
