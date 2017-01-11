@@ -1,11 +1,32 @@
+<!--logs.wxml-->
+<loading hidden="{{!loading}}">
+	{{title}}
+</loading>
 
-<!--index.wxml-->
-<view class="container-out">
-  <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};"></view>
-  <view class="container-in">
-    <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
-      <image class="award-image" src="{{item.imageAward}}"></image>
-    </view>
-    <view class="start-btn" bindtap="startGame" style=" background-color:{{isRunning?'#e7930a':'#ffe400'}}">START</view>
-  </view>
-</view>
+<scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
+	<navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
+		<view class="item">
+			<image class="poster" src="{{item.images.small}}"></image>
+			<view class="meta">
+				<text class="title">{{item.title}}</text>
+				<text class="sub-title">{{item.original_title}}({{item.year}})</text>
+				<view class="artists">
+					<text wx:for="{{item.directors}}">{{item.name}}</text>
+				</view>
+			</view>
+			<view class="rating">
+				<text>{{item.rating.average}}</text>
+			</view>
+		</view>
+	</navigator>
+	<view class="tips">
+		<view wx:if="{{hasMore}}">
+			<text>使劲儿加载中。。。</text>
+		</view>
+		<view wx:else>
+			<text>数据加载完毕。。。</text>
+		</view>
+	</view>
+
+</scroll-view>
+
